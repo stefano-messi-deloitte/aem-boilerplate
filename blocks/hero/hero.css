@@ -19,6 +19,14 @@ main .hero-container {
   color: white;
 }
 
+.hero-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
 .hero picture {
   height: 100vh;
   position: absolute;
