@@ -1,59 +1,48 @@
-main .hero-container > div {
-  max-width: unset;
-}
-
-main .hero-container {
-  padding: 0;
-}
-
-.hero {
+.hero-container {
   position: relative;
-  padding: 32px;
-  min-height: 300px;
+  width: 100%;
+  height: 100vh; /* Set height to take the full screen height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
-.hero h1 {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: white;
-}
-
-.hero-wrapper {
-  height: 100vh;
-  position: relative;
-}
-
-.hero picture {
-  height: 100vh;
+.hero-wrapper .hero.block picture {
   position: absolute;
-  z-index: -1;
-  inset: 0;
-  object-fit: cover;
-  box-sizing: border-box;
-}
-
-.hero img {
-  object-fit: cover;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  z-index: -1;
 }
 
-
-.hero p:first-of-type {
-  color: white;
-  text-align: center;
-  position: absolute;
-  bottom: 0;
+.hero-wrapper .hero.block picture img {
   width: 100%;
-  font-size: 4.5rem;
+  height: 100%;
+  object-fit: cover;
 }
 
-.hero p:nth-of-type(2) {
-  color: white;
-  text-align: center;
+.hero-wrapper .hero.block > div:nth-child(2) {
   position: absolute;
-  bottom: 0;
+  bottom: 20px; /* Adjust the position as needed */
   width: 100%;
-  font-size: 2.5rem;
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better text readability */
+  padding: 20px;
+}
+
+.hero-wrapper .hero.block > div:nth-child(2) p {
+  margin: 0;
+  font-size: 2em; /* Adjust the font size as needed */
+}
+
+.hero-wrapper .hero.block > div:nth-child(2) p:first-child {
+  font-weight: bold;
+}
+
+.hero-wrapper .hero.block > div:nth-child(2) p:last-child {
+  font-style: italic;
+  margin-top: 10px; /* Adjust the margin between the paragraphs as needed */
 }
