@@ -63,3 +63,16 @@ main .hero-container {
   background: rgba(0, 0, 0, 0.2); /* Semi-transparent background */
   z-index: 1; /* Ensure it appears above the image */
 }
+
+@media only screen and (max-width: 768px) {
+
+  .hero h3 {
+    font-size: 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+
+}
